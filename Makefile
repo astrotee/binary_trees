@@ -3,7 +3,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -pedantic -g
 
-all: 0-node 1-left 2-right 3-del 4-leaf 5-root 6-pre
+all: 0-node 1-left 2-right 3-del 4-leaf 5-root 6-pre 7-in
 
 0-node: binary_tree_print.c 0-main.c 0-binary_tree_node.c
 	${CC} ${CFLAGS} -o $@ $^
@@ -24,4 +24,7 @@ all: 0-node 1-left 2-right 3-del 4-leaf 5-root 6-pre
 	${CC} ${CFLAGS} -o $@ $^
 
 6-pre: binary_tree_print.c 6-main.c 6-binary_tree_preorder.c 0-binary_tree_node.c
+	${CC} ${CFLAGS} -o $@ $^
+
+7-in: binary_tree_print.c 7-main.c 7-binary_tree_inorder.c 0-binary_tree_node.c
 	${CC} ${CFLAGS} -o $@ $^
